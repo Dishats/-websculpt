@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title> ISTE CLUB </title>
+	<style>
+
+	
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    .event-container {
+      display: flex;
+      flex-wrap: wrap;
+	  padding: 134px;
+    }
+
+    .event-card {
+      border: 5px solid #ccc;
+      margin: 20px;
+      padding: 10px;
+      width: 500px;
+	  text-align: left;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    select {
+      margin-bottom: 10px;
+      background-color: transparent;
+    padding: 10px;
+    font-size: 15px;
+    }
+	label{
+		padding: 10px;
+		box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+	}
+  </style>
+	  </style>
+    <link rel = "stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;600;700&display=swap" rel="stylesheet">
+    
+    </head>
+    <body>
+        <section class=" sub header">
+            <nav>
+                <a href="index.html"><img src="images/logo1.jfif"></a>
+                <div class="nav-links" id="navLinks">
+                    <i class="fa fa-times" onclick="hideMenu()"></i>
+                    <ul>
+                       <li><a href="index.html">HOME</a></li>
+                        <li><a href="about.html">ABOUT</a></li>
+                        <li><a href="chapters.html">CHAPTERS</a></li>
+                        <li><a href="events.html">EVENTS</a></li>
+                        <li><a href="contact.html">CONTACT</a></li>
+                        <li><a href="gallery.html">GALLERY</a></li>
+                        <li><a href="achievements.html">ACHIEVEMENTS</a></li>
+						<li><a href="magazine.html">MAGAZINE</a></li>
+                    </ul>
+                </div>
+                <i class="fa fa-bars" onclick="showMenu()"></i>
+            </nav>
+            <h1 style="font-family: 'Black Ops One';" > <br>UPCOMING EVENTS </h1>
+        </section>
+        
+
+		<section>
+
+			
+			
+			<div style="text-align: center;margin-top: 50px;">
+                <label for="sort">Sort by:</label>
+			<select id="sort" onchange="sortEvents()">
+            </div>
+			  <option value="default">Default</option>
+			  <option value="year">Year</option>
+			  <option value="month">Month</option>
+			</select>
+		  
+			<div class="event-container" id="eventContainer">
+			  <!-- Events will be dynamically added here -->
+			  
+			</div></section>
+			
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+	
+	<section class="footer">
+		<h4>About us</h4>
+		<p>we always thrive to work hard even in the hardest times of the year to achieve the main goals and aspirations to make<br> sure we live a very happy life according to us </p>
+			 <div class="icons">
+				<a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
+				   <a href="https://www.twitter.com/"><i class="fa fa-twitter"></i></a> 
+					<a href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a>
+				   <a href="https://www.linkedin.com/"><i class="fa fa-linkedin"></i></a> 
+	
+			 </div>
+			 <p>
+				Made with  <i class="fa fa-heart-o"></i> by Phoenix
+			 </p>
+	
+	   </section>
+	  
+	 
+
+       <!----------Javascript for toggle menu------------>
+        <script>
+            var navlinks = document.getElementById("navLinks");
+            function showMenu(){
+                navLinks.style.right="0";
+            }
+            function hideMenu(){
+                navLinks.style.right="-200px";
+            }
+
+			// js for sorting
+
+			const events = [
+      { year: 2024, month: 1, image: 'images/abc.jpeg', description:'The ISTE Club at PESCE Mandya has demonstrated exceptional prowess in organizing technical events, setting a benchmark for excellence. Through meticulous planning, innovative execution, and fostering a collaborative environment, they have facilitated impactful gatherings that promote knowledge exchange and skill development. DATE:13/01/2024' },
+      { year: 2024, month: 2, image: 'images/tc.jpeg', description: 'The ISTE Club at PESCE Mandya has demonstrated exceptional prowess in organizing technical events, setting a benchmark for excellence. Through meticulous planning, innovative execution, and fostering a collaborative environment, they have facilitated impactful gatherings that promote knowledge exchange and skill development. DATE: 8/02/2024' },
+      { year: 2023, month: 3, image: 'images/pa1.jpeg', description: 'The ISTE Club at PESCE Mandya has demonstrated exceptional prowess in organizing technical events, setting a benchmark for excellence. Through meticulous planning, innovative execution, and fostering a collaborative environment, they have facilitated impactful gatherings that promote knowledge exchange and skill development . DATE:12/03/2024' },
+	 
+	  { year: 2024, month: 4, image: 'images/bb.jpeg', description: 'The ISTE Club at PESCE Mandya has demonstrated exceptional prowess in organizing technical events, setting a benchmark for excellence. Through meticulous planning, innovative execution, and fostering a collaborative environment, they have facilitated impactful gatherings that promote knowledge exchange and skill development \n DATE:25/4/2024' },
+	  { year: 2024, month: 5, image: 'images/cc.jpeg', description: 'The ISTE Club at PESCE Mandya has demonstrated exceptional prowess in organizing technical events, setting a benchmark for excellence. Through meticulous planning, innovative execution, and fostering a collaborative environment, they have facilitated impactful gatherings that promote knowledge exchange and skill development \n DATE: 5/5/2024' },
+	  { year: 2025, month: 6,  image: 'images/1.1.jpeg', description: 'ISTE club PESCE Mandya proudly organized a blood donation camp, a beacon of altruism and community service. With fervor and dedication, volunteers and donors came together to save lives.\ndate:22/6/2025 \n Venue:Placement Auditorium' },
+	 
+      // Add more events as needed
+    ];
+
+    function displayEvents() {
+      const eventContainer = document.getElementById('eventContainer');
+      eventContainer.innerHTML = '';
+
+      events.forEach(event => {
+        const eventCard = document.createElement('div');
+        eventCard.classList.add('event-card');
+
+        const image = document.createElement('img');
+        image.src = event.image;
+        eventCard.appendChild(image);
+
+        const description = document.createElement('p');
+        description.textContent = event.description;
+        eventCard.appendChild(description);
+
+        eventContainer.appendChild(eventCard);
+      });
+    }
+
+    function sortEvents() {
+      const sortBy = document.getElementById('sort').value;
+
+      switch (sortBy) {
+        case 'year':
+          events.sort((a, b) => a.year - b.year || a.month - b.month);
+          break;
+        case 'month':
+          events.sort((a, b) => a.month - b.month || a.year - b.year);
+          break;
+		
+        default:
+          // Default sorting
+          events.sort((a, b) => a.year - b.year || a.month - b.month);
+      }
+
+      displayEvents();
+    }
+
+    // Initial display
+    displayEvents();
+        </script>
+		
+
+    </body>
+	
+</html>
+
+

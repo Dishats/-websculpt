@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title> ISTE CLUB </title>
+    <link rel = "stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;600;700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <section class="sub header">
+            <nav>
+                <a href="index.html"><img src="images/logo1.jfif"></a>
+                <div class="nav-links" id="navLinks">
+                    <i class="fa fa-times" onclick="hideMenu()"></i>
+                    <ul>
+                       <li><a href="index.html">HOME</a></li>
+                        <li><a href="about.html">ABOUT</a></li>
+                        <li><a href="chapters.html">CHAPTERS</a></li>
+                        <li><a href="events.html">EVENTS</a></li>
+                        <li><a href="contact.html">CONTACT</a></li>
+                        <li><a href="gallery.html">GALLERY</a></li>
+                        <li><a href="achievements.html">ACHIEVEMENTS</a></li>
+                        <li><a href="magazine.html">MAGAZINE</a></li>
+                    </ul>
+                </div>
+                <i class="fa fa-bars" onclick="showMenu()"></i>
+            </nav>
+            <h1 style="font-family: 'Black Ops One';" >ABOUT US </h1>
+            <p>we always thrive to work hard even in the hardest times of the year to achieve the main goals and aspirations to make<br> sure we l;ive a very happy life according to us </p>
+        </section>
+
+        <!--------- about us content ----->
+
+        <section class="about-us">
+            <div class ="row">
+                <div class ="about-col">
+                    <h1>ISTE CLUB </h1>
+                      <p style="text-align: left;">Welcome to the ISTE club, where innovation meets creativity, and technology transcends boundaries. Our club is a vibrant community of thinkers, creators, and problem-solvers from all domains, united by our passion for harnessing the power of technology to drive positive change. Whether you're a budding programmer, a design enthusiast, a future entrepreneur, or simply curious about the latest tech trends, you'll find a home here. From coding workshops to design challenges, from robotics competitions to entrepreneurial seminars, we offer a diverse range of opportunities to learn, collaborate, and grow. Join us on a journey where imagination knows no limits, and together, let's shape the future of innovation.</p> 
+                    <a href="" class="hero-btn red-btn">EXPLORE NOW</a>
+                </div>
+                <div class="about-col">
+                    <img src="images/about.jpg">
+                </div>
+            </div>
+        </section>
+
+    
+        <!------Footer-------> 
+
+        <section class="footer">
+            <h4>About us</h4>
+            <p>we always thrive to work hard even in the hardest times of the year to achieve the main goals and aspirations to make<br> sure we live a very happy life according to us </p>
+                 <div class="icons">
+                    <a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
+                       <a href="https://www.twitter.com/"><i class="fa fa-twitter"></i></a> 
+                        <a href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a>
+                       <a href="https://www.linkedin.com/"><i class="fa fa-linkedin"></i></a> 
+    
+                 </div>
+                 <p>
+                    Made with  <i class="fa fa-heart-o"></i> by Phoenix
+                 </p>
+    
+           </section>
+
+
+
+
+
+
+
+
+       <! ----------Javascript for toggle menu------------ >
+        <script>
+            var navlinks = document.getElementById("navLinks");
+            function showMenu(){
+                navLinks.style.right="0";
+            }
+            function hideMenu(){
+                navLinks.style.right="-200px";
+            }
+        </script>
+
+
+
+    </body>
+</html>
